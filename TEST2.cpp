@@ -23,7 +23,7 @@ int main() {
 	std::cout << "Введите баланс :";
 	std::cin >> userMoney;
 	newBalance(information,userMoney);
-	std::cout << "Âàø ñ÷åò: " << information.Name << ", " << information.cardNumber << ", " << information.cash << std::endl;
+	std::cout << "Ваш счет: " << information.Name << ", " << information.cardNumber << ", " << information.cash << std::endl;
 
 	return EXIT_SUCCESS;
 }
