@@ -16,11 +16,11 @@ int main() {
 	int userCardNumber;;
 	std::string userName;
 	double userMoney;
-	std::cout << "Ââåäèòå íîìåð ñ÷¸òà :";
+	std::cout << "Введите номер счета :";
 	std::cin >> userCardNumber;
-	std::cout << "Ââåäèòå èìÿ âëàäåëüöà :";
+	std::cout << "Введите имя владельца :";
 	std::cin >> userName;
-	std::cout << "Ââåäèòå áàëàíñ :";
+	std::cout << "Введите баланс :";
 	std::cin >> userMoney;
 	newBalance(information,userMoney);
 	std::cout << "Âàø ñ÷åò: " << information.Name << ", " << information.cardNumber << ", " << information.cash << std::endl;
