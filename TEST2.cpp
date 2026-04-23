@@ -6,10 +6,8 @@ public:
 	std::string Name{};
 	double cash{};
 };
-double newBalance(int cardNumber, double& last_balance) {
-	std::cout << "Ââåäèòå íîâûé áàëàíñ :";
-	std::cin >> last_balance;
-	return last_balance;
+void newBalance(Information& information, double userMoney) {
+	information.cash = userMoney;
 }
 int main() {
 	SetConsoleOutputCP(1251);
@@ -18,14 +16,14 @@ int main() {
 	int userCardNumber;;
 	std::string userName;
 	double userMoney;
-	std::cout << "Ââåäèòå íîìåð ñ÷¸òà :";
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã±Ã·Â¸Ã²Ã  :";
 	std::cin >> userCardNumber;
-	std::cout << "Ââåäèòå èìÿ âëàäåëüöà :";
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¨Ã¬Ã¿ Ã¢Ã«Ã Ã¤Ã¥Ã«Ã¼Ã¶Ã  :";
 	std::cin >> userName;
-	std::cout << "Ââåäèòå áàëàíñ :";
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¡Ã Ã«Ã Ã­Ã± :";
 	std::cin >> userMoney;
-	information.cash = newBalance(userCardNumber,userMoney);
-	std::cout << "Âàø ñ÷åò: " << information.Name << ", " << information.cardNumber << ", " << userMoney<< std::endl;
+	newBalance(information,userMoney);
+	std::cout << "Ã‚Ã Ã¸ Ã±Ã·Ã¥Ã²: " << information.Name << ", " << information.cardNumber << ", " << information.cash << std::endl;
 
 	return EXIT_SUCCESS;
 }
